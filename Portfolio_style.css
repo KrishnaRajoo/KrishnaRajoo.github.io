@@ -107,7 +107,6 @@ nav ul li a:hover {
   font-weight: bold;
   border-radius: 25px;
   transition: 0.3s ease;
-  text-decoration: none;
   outline: none;
 }
 
@@ -410,7 +409,6 @@ nav ul li a:hover {
   margin-left: 10px;
   border: 2px solid #00d9ff;
   color: #00d9ff;
-  text-decoration: none;
   outline: none;
   border-radius: 25px;
   transition: 0.3s ease;
@@ -420,7 +418,6 @@ nav ul li a:hover {
   background: #00d9ff;
   color: #000;
   outline: none;
-  text-decoration: none;
 }
 /* Logo with Photo */
 .logo {
@@ -545,5 +542,6 @@ nav ul li a:hover {
   }
 
 }
+
 
 
