@@ -107,12 +107,15 @@ nav ul li a:hover {
   font-weight: bold;
   border-radius: 25px;
   transition: 0.3s ease;
+  text-decoration: none;
+  outline: none;
 }
 
 .btn:hover {
   background: #0088cc;
   color: #fff;
   transform: translateY(-3px);
+  outline: none;
 }
 
 /* Hero Photo */
@@ -408,6 +411,7 @@ nav ul li a:hover {
   border: 2px solid #00d9ff;
   color: #00d9ff;
   text-decoration: none;
+  outline: none;
   border-radius: 25px;
   transition: 0.3s ease;
 }
@@ -415,6 +419,8 @@ nav ul li a:hover {
 .btn-outline:hover {
   background: #00d9ff;
   color: #000;
+  outline: none;
+  text-decoration: none;
 }
 /* Logo with Photo */
 .logo {
@@ -539,4 +545,5 @@ nav ul li a:hover {
   }
 
 }
+
 
