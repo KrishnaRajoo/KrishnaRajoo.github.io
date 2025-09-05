@@ -23,7 +23,7 @@ section {
 
 /* Navbar */
 header {
-  background: linear-gradient(90deg, #000000, #0f4c75);
+  background: linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
   padding: 15px 0;
   position: sticky;
   top: 0;
@@ -67,7 +67,7 @@ nav ul li a:hover {
 /* Hero */
 .hero {
   padding: 100px 20px;
-  background: linear-gradient(to right, #000000, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
   color: #fff;
 }
 
@@ -185,7 +185,7 @@ nav ul li a:hover {
 }
 
 .timeline-content {
-  background: #111;
+  background: #000000;
   padding: 15px 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,217,255,0.2);
@@ -229,7 +229,7 @@ nav ul li a:hover {
 }
 
 .skill-card {
-  background: #111;
+  background: #000000;
   border: 1px solid #00d9ff;
   color: #00d9ff;
   padding: 20px;
@@ -263,7 +263,7 @@ nav ul li a:hover {
 }
 
 .project-card {
-  background: #111;
+  background: #000000;
   padding: 25px;
   margin: 25px auto;
   border-radius: 12px;
@@ -296,7 +296,7 @@ nav ul li a:hover {
 }
 
 .internship-card {
-  background: #111;
+  background: #000000;
   padding: 25px;
   margin: 20px auto;
   border-radius: 12px;
@@ -335,7 +335,7 @@ nav ul li a:hover {
 }
 
 .contact-card {
-  background: #111;
+  background: #000000;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(0,217,255,0.2);
@@ -386,7 +386,7 @@ nav ul li a:hover {
 }
 
 .resume-card {
-  background: #111;
+  background: #000000;
   padding: 25px;
   margin: 20px auto;
   border-radius: 12px;
