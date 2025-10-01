@@ -497,7 +497,7 @@ nav ul li a:hover {
   box-shadow: 0 0 8px rgba(0,217,255,0.7);
   object-fit: cover;
 }
-/* Extra Responsive Fix for Smartphones (like Oppo A5s ~360px wide) */
+
 @media (max-width: 600px) {
   /* Navbar adjustments */
   nav {
@@ -513,7 +513,7 @@ nav ul li a:hover {
     white-space: nowrap;       /* prevent text from breaking */
     width: 100%;
     justify-content: flex-start;
-    padding: 5px 0;
+    padding: 3px 0;
     -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
   }
 
@@ -522,8 +522,11 @@ nav ul li a:hover {
   }
 
   nav ul li {
-    margin: 0 12px;
-    flex: 0 0 auto;  /* prevent shrinking */
+    margin-right: 10px;
+  }
+  nav ul li a {
+    font-size: 14px;
+
   }
 
   /* Logo smaller */
