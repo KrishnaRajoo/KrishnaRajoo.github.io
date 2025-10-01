@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Krishna Rajoo | Portfolio</title>
-  <link rel="icon" type="image/png" href="Me-modified.png">
+  <link rel="icon" type="image/png" href="My_Logo.png">
   <link rel="stylesheet" href="Portfolio_style.css">
 </head>
 <body style="background-color: #000000;">
+
+  <!-- Splash Screen -->
+<div id="splash" aria-hidden="true">
+  <div class="splash-logo">
+    <img src="My_image.png" alt="Krishna Rajoo" />
+  </div>
+</div>
   <!-- Navbar -->
   <header>
     <nav>
-      <h1 class="logo"><img src="Me.jpg" alt="Krishna Rajoo" class="logo-img"> Krishna Rajoo</h1>
+      <h1 class="logo"><img src="My_image.png" alt="Krishna Rajoo" class="logo-img"> Krishna Rajoo</h1>
 
       <ul>
         <li><a href="#home">Home</a></li>
@@ -108,24 +115,54 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">Python</div>
-      <div class="skill-card">MySQL</div>
-      <div class="skill-card">C Programming</div>
-      <div class="skill-card">Java (Basics)</div>
-      <div class="skill-card">Pandas & NumPy</div>
-      <div class="skill-card">HTML & CSS</div>
-      <div class="skill-card">JavaScript (Basics)</div>
-      <div class="skill-card">Power BI</div>
-      <div class="skill-card">Data Cleaning</div>
-      <div class="skill-card">Data Visualization</div>
-      <div class="skill-card">GitHub</div>
-      <div class="skill-card">MS Office</div>
+<section id="skills" class="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills-container">
+
+    <div class="skill-category">
+      <h3>Programming & Databases</h3>
+      <ul>
+        <li>Python</li>
+        <li>C Programming</li>
+        <li>Java (Basics)</li>
+        <li>MySQL</li>
+      </ul>
     </div>
 
+    <div class="skill-category">
+      <h3>Web Technologies</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript (Basics)</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Data Analysis & Visualization</h3>
+      <ul>
+        <li>Pandas & NumPy</li>
+        <li>Data Cleaning</li>
+        <li>Exploratory Data Analysis (EDA)</li>
+        <li>Data Visualization</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Tools</h3>
+      <ul>
+        <li>PowerBI</li>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>MS Office</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+  <section id="skills" class="skills">
     <h2>Soft Skills</h2>
+    <div class="project-card">
     <div class="skills-grid">
       <div class="skill-card">Analytical Thinking</div>
       <div class="skill-card">Business Intelligence</div>
@@ -135,6 +172,7 @@
       <div class="skill-card">Team Collaboration</div>
       <div class="skill-card">Decision Making</div>
       <div class="skill-card">Attention to Detail</div>
+    </div>
     </div>
   </section>
 
