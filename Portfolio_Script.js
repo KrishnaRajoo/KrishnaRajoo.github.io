@@ -42,29 +42,27 @@
   });
 })();
 
-  // Splash control: play 1s entry animation, then fade out
-window.addEventListener('load', () => {
+// Splash control: play 1s entry animation, then fade out
+document.addEventListener('DOMContentLoaded', () => {
   const splash = document.getElementById('splash');
   if (!splash) return;
 
   const logo = splash.querySelector('.splash-logo');
 
-  // small timeout to ensure element is rendered, then trigger animation
+  // trigger entry animation after small delay
   setTimeout(() => {
-    logo.classList.add('animate'); // runs the 2s entry animation
+    logo.classList.add('animate');
   }, 100);
 
-  // after entry animation (1s) + a short visible pause (700ms) => fade out
-  const TOTAL_VISIBLE_MS = 1000 + 1500; // 1s animation + 1.5s pause
+  // after entry animation (1s) + 2s pause => fade out
+  const TOTAL_VISIBLE_MS = 1000 + 2000; // 1s animation + 2s pause
   setTimeout(() => {
-    splash.classList.add('fade-out'); // starts 0.8s fade
+    splash.classList.add('fade-out');
   }, TOTAL_VISIBLE_MS);
 
-  // remove from DOM after fade completes (0.8s), to avoid overlay blocking interactions
   splash.addEventListener('transitionend', (ev) => {
     if (ev.propertyName === 'opacity' && splash.classList.contains('fade-out')) {
       splash.style.display = 'none';
-      splash.remove(); // optional: remove node
     }
   });
 });
