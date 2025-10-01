@@ -507,8 +507,6 @@ nav ul li a:hover {
 
   nav ul {
     display: flex;
-    flex-direction: row;       /* keep menu in a single row */
-    flex-wrap: nowrap;         /* prevent wrapping */
     overflow-x: auto;          /* allow horizontal scroll if too long */
     white-space: nowrap;       /* prevent text from breaking */
     width: 100%;
