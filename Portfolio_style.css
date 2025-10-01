@@ -857,10 +857,22 @@ nav ul li a:hover {
   color: #00d9ff;
 }
 
-/* Adjust font-size for smaller screens */
-@media (max-width: 600px) {
-  .nav-links a {
-    font-size: 14px;
-    padding: 5px 8px;
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    width: 200px;
+    background: black;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 12px rgba(0,217,255,0.4);
+    z-index: 2000;
+  }
+
+  .nav-links.show {
+    display: flex; /* show when toggled by JS */
   }
 }
