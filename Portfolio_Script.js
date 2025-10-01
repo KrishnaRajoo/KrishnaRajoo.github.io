@@ -67,23 +67,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('nav-links');
 
   if (!toggle || !nav) return;
 
-  toggle.addEventListener('click', () => {
+  // Toggle menu on button click
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent immediate close
     nav.classList.toggle('show');
     toggle.setAttribute('aria-expanded', nav.classList.contains('show'));
   });
 
-  // Close menu when a link is clicked (mobile UX)
+  // Close menu when a nav link is clicked
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('show');
       toggle.setAttribute('aria-expanded', 'false');
     });
+  });
+
+  // ✅ Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (
+      nav.classList.contains('show') &&
+      !nav.contains(e.target) &&
+      e.target !== toggle
+    ) {
+      nav.classList.remove('show');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
   });
 });

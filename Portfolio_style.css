@@ -10,58 +10,173 @@ body {
   background: #0d0d0d;
   color: #e6e6e6;
 }
-html { 
-  scroll-behavior: smooth; 
+html {
+  scroll-behavior: smooth;
 }
 
 /* so sticky header doesn't cover section titles */
-section { 
+section {
   scroll-margin-top: 90px; /* adjust if your header height changes */
 }
 
-/* Navbar */
+/* -------- Navbar Styles -------- */
 header {
   background: linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
-  padding: 15px 0;
+  padding: 12px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-nav {
+.navbar {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85%;
-  margin: auto;
+  padding: 0 15px;
 }
 
 .logo {
-  color: #00d9ff;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
   display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00d9ff;
+  justify-content: flex-start;
+  flex: 1;
+  text-align: left;
 }
 
-nav ul li {
-  margin-left: 25px;
+.logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid #00d9ff;
 }
 
-nav ul li a {
+/* Links (desktop) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s ease;
+  padding: 6px 8px;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
-nav ul li a:hover {
+.nav-links a:hover {
   color: #00d9ff;
 }
 
+/* Hamburger toggle button */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: #00d9ff;
+  cursor: pointer;
+}
+/* Navbar container */
+.navbar {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between; /* logo left, menu right */
+  align-items: center;
+  flex-wrap: nowrap;       /* vertical alignment */
+}
+
+/* Logo (left) */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00d9ff;
+}
+
+/* Hamburger button (right side of same row) */
+.menu-toggle {
+  display: none; /* hidden on desktop */
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #00d9ff;
+  cursor: pointer;
+  margin-left: auto; /* push it to the right */
+}
+
+/* -------- Mobile view -------- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;   /* keep items on right side */
+    background: black;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    width: 220px;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 0 12px rgba(0,217,255,0.4);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  /* Each menu item container */
+  .nav-links li {
+    width: 100%;
+    margin: 6px 0;
+    background: #0d0d0d;
+    border: 1px solid #00d9ff;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0,217,255,0.2);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  }
+
+  .nav-links li:hover {
+    background: #00d9ff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(0,217,255,0.5);
+  }
+
+  .nav-links a {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 12px;
+    text-align: right;
+    border-radius: 6px;
+    width: 100%;
+    transition: color 0.3s;
+  }
+
+  .nav-links li:hover a {
+    color: #000;
+    font-weight: bold;
+  }
+}
 /* Hero */
 .hero {
   padding: 100px 20px;
@@ -507,12 +622,14 @@ nav ul li a:hover {
 
   nav ul {
     display: flex;
+    align-items: center;
+    flex-direction: row;       /* keep menu in a single row */
+    flex-wrap: nowrap;         /* prevent wrapping */
     overflow-x: auto;          /* allow horizontal scroll if too long */
     white-space: nowrap;       /* prevent text from breaking */
     width: 100%;
     justify-content: flex-start;
     padding: 3px 0;
-    -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
   }
 
   nav ul::-webkit-scrollbar {
@@ -521,10 +638,6 @@ nav ul li a:hover {
 
   nav ul li {
     margin-right: 10px;
-  }
-  nav ul li a {
-    font-size: 14px;
-
   }
 
   /* Logo smaller */
