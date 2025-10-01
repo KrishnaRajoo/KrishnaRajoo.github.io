@@ -856,7 +856,6 @@ nav ul li a:hover {
 .nav-links a:hover {
   color: #00d9ff;
 }
-
 @media (max-width: 768px) {
   .nav-links {
     display: none; /* hidden by default */
@@ -865,14 +864,24 @@ nav ul li a:hover {
     top: 60px;
     right: 15px;
     width: 200px;
-    background: black;
+    background: #111;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px; /* reduced padding */
     box-shadow: 0 0 12px rgba(0,217,255,0.4);
     z-index: 2000;
   }
 
   .nav-links.show {
-    display: flex; /* show when toggled by JS */
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 6px 0; /* reduce space between links */
+  }
+
+  .nav-links a {
+    padding: 6px 8px;   /* tighter padding inside link */
+    font-size: 15px;    /* slightly smaller font */
+    display: block;
   }
 }
