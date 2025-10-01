@@ -19,7 +19,38 @@ section {
   scroll-margin-top: 90px; /* adjust if your header height changes */
 }
 
+/* Hide menu toggle on big screens */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #00d9ff;
+  cursor: pointer;
+}
 
+/* Mobile */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* hide menu by default */
+    flex-direction: column;
+    background:linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,217,255,0.3);
+  }
+  nav ul.show {
+    display: flex; /* show when toggled */
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
 
 /* Navbar */
 header {

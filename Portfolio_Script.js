@@ -1,3 +1,7 @@
+document.getElementById("menu-toggle").addEventListener("click", () => {
+  document.getElementById("nav-links").classList.toggle("show");
+});
+
 // Smooth scrolling with sticky-header offset + fallback
 (function () {
   const header = document.querySelector('header');
