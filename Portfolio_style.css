@@ -823,3 +823,44 @@ nav ul li a:hover {
     text-align: right;
   }
 }
+
+/* -------- Force nav links in one row -------- */
+.nav-links {
+  display: flex !important;
+  flex-wrap: nowrap;       /* keep in one line */
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;        /* allow scroll if too many links */
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;           /* hide scrollbar on mobile */
+}
+
+.nav-links li {
+  flex: 0 0 auto;          /* prevent shrinking */
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;     /* prevent wrapping */
+}
+
+.nav-links a:hover {
+  color: #00d9ff;
+}
+
+/* Adjust font-size for smaller screens */
+@media (max-width: 600px) {
+  .nav-links a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+}
