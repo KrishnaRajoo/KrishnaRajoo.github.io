@@ -19,39 +19,6 @@ section {
   scroll-margin-top: 90px; /* adjust if your header height changes */
 }
 
-/* Hide menu toggle on big screens */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: #00d9ff;
-  cursor: pointer;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  nav ul {
-    display: none; /* hide menu by default */
-    flex-direction: column;
-    background:linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 12px rgba(0,217,255,0.3);
-  }
-  nav ul.show {
-    display: flex; /* show when toggled */
-  }
-  nav ul li {
-    margin: 10px 0;
-  }
-  .menu-toggle {
-    display: block;
-  }
-}
-
 /* Navbar */
 header {
   background: linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
@@ -785,4 +752,74 @@ nav ul li a:hover {
   .hero-text h2 { font-size: 20px; }
   .hero-photo img { width: 120px; height: 120px; }
   nav ul li { margin: 0 6px; }
+}
+/* -------- Hamburger Menu Styles -------- */
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+  position: relative;
+}
+
+/* Links for desktop */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links style */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+.nav-links a:hover {
+  color: #00d9ff;
+}
+
+/* Hamburger button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #00d9ff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* -------- Mobile view -------- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* show hamburger */
+  }
+
+  .nav-links {
+    display: none; /* hide by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    width: 200px;
+    background: #111;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 12px rgba(0,217,255,0.4);
+    z-index: 2000;
+  }
+
+  .nav-links.show {
+    display: flex; /* show when toggled */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: right;
+  }
 }

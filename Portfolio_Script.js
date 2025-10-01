@@ -1,6 +1,3 @@
-document.getElementById("menu-toggle").addEventListener("click", () => {
-  document.getElementById("nav-links").classList.toggle("show");
-});
 
 // Smooth scrolling with sticky-header offset + fallback
 (function () {
@@ -68,5 +65,25 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ev.propertyName === 'opacity' && splash.classList.contains('fade-out')) {
       splash.style.display = 'none';
     }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-links');
+
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+    toggle.setAttribute('aria-expanded', nav.classList.contains('show'));
+  });
+
+  // Close menu when a link is clicked (mobile UX)
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('show');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
   });
 });
