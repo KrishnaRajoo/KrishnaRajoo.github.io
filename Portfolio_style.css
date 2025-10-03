@@ -54,6 +54,8 @@ header {
   border-radius: 50%;
   margin-right: 8px;
   border: 2px solid #00d9ff;
+  align-items: flex-start;
+  margin-right: auto;
 }
 
 /* Links (desktop) */
@@ -180,7 +182,6 @@ header {
 /* Hero */
 .hero {
   padding: 100px 20px;
-  background: linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
   color: #fff;
 }
 
@@ -865,4 +866,31 @@ header {
   .hero-text h2 { font-size: 20px; }
   .hero-photo img { width: 120px; height: 120px; }
   nav ul li { margin: 0 6px; }
+}
+
+.container {
+  position: relative; /* Establish positioning context */
+  /* Add dimensions if needed */
+  min-height: 100vh; /* Example height */
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-image: url("My_image.png"); /* Your watermark image */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* Adjust fit */
+  opacity: 0.15; /* Make it subtle */
+  z-index: -1; /* Send behind content */
+}
+
+.content {
+  position: relative; /* Ensure content stays above watermark */
+  padding: 20px;
+  /* Add styling for your content */
 }
