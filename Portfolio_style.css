@@ -183,11 +183,13 @@ header {
 .hero {
   padding: 100px 20px;
   color: #fff;
+  background: linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
 }
 
 .hero-container {
   display: flex;
   justify-content: space-between;
+  background: linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
   align-items: center;
   max-width: 1100px;
   margin: auto;
