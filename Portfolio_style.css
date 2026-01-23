@@ -7,8 +7,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #0d0d0d;
-  color: #e6e6e6;
+  background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
+  color: whitesmoke;
 }
 html {
   scroll-behavior: smooth;
@@ -21,7 +21,7 @@ section {
 
 /* -------- Navbar Styles -------- */
 header {
-  background: linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
+  background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
   padding: 12px 0;
   position: sticky;
   top: 0;
@@ -42,7 +42,7 @@ header {
   align-items: center;
   font-size: 20px;
   font-weight: bold;
-  color: #00d9ff;
+  color: whitesmoke;
   justify-content: flex-start;
   flex: 1;
   text-align: left;
@@ -53,9 +53,12 @@ header {
   height: 32px;
   border-radius: 50%;
   margin-right: 8px;
-  border: 2px solid #00d9ff;
+  border: 2px solid blue;
   align-items: flex-start;
   margin-right: auto;
+}
+.logo-text{
+  color: whitesmoke;
 }
 
 /* Links (desktop) */
@@ -88,7 +91,7 @@ header {
   background: transparent;
   border: none;
   font-size: 26px;
-  color: #00d9ff;
+  color: white;
   cursor: pointer;
 }
 /* Navbar container */
@@ -108,7 +111,7 @@ header {
   justify-content: flex-start;
   font-size: 20px;
   font-weight: bold;
-  color: #00d9ff;
+  color: blue;
 }
 
 /* Hamburger button (right side of same row) */
@@ -117,7 +120,7 @@ header {
   background: transparent;
   border: none;
   font-size: 28px;
-  color: #00d9ff;
+  color: white;
   cursor: pointer;
   margin-left: auto; /* push it to the right */
 }
@@ -132,14 +135,13 @@ header {
     display: none;
     flex-direction: column;
     align-items: flex-end;   /* keep items on right side */
-    background: black;
+    background: linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
     position: absolute;
     top: 60px;
     right: 15px;
     width: 220px;
     border-radius: 10px;
     padding: 12px;
-    box-shadow: 0 0 12px rgba(0,217,255,0.4);
   }
 
   .nav-links.show {
@@ -150,15 +152,15 @@ header {
   .nav-links li {
     width: 100%;
     margin: 6px 0;
-    background: #0d0d0d;
+    background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
     border: 1px solid #00d9ff;
     border-radius: 6px;
-    box-shadow: 0 0 6px rgba(0,217,255,0.2);
+    box-shadow: 0 0 6px darkblue;
     transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
   }
 
   .nav-links li:hover {
-    background: #00d9ff;
+    background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
     transform: translateY(-3px);
     box-shadow: 0 0 12px rgba(0,217,255,0.5);
   }
@@ -183,13 +185,20 @@ header {
 .hero {
   padding: 100px 20px;
   color: #fff;
-  background: linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
+  background: linear-gradient(to right, rgb(115, 115, 253), blue, rgb(115, 115, 253));
+  position: relative;
+  padding: 100px 20px;
+  color: #fff;
+  background: linear-gradient(to right, rgba(115, 115, 253), rgba(0,0,255,0.60), rgba(115, 115, 253)),
+    url("Watermark.png") no-repeat center;
+  background-size: 380px;
+  background-size: 420px;
+  background-position: center right;
 }
 
 .hero-container {
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
   align-items: center;
   max-width: 1100px;
   margin: auto;
@@ -218,8 +227,9 @@ header {
 .btn {
   display: inline-block;
   padding: 12px 25px;
-  background: #00d9ff;
-  color: #000;
+  background: linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
+  box-shadow: 0 0 10px darkblue;
+  color: white;
   font-weight: bold;
   border-radius: 25px;
   transition: 0.3s ease;
@@ -228,7 +238,7 @@ header {
 }
 
 .btn:hover {
-  background: #0088cc;
+  background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
   color: #fff;
   transform: translateY(-3px);
   outline: none;
@@ -247,10 +257,12 @@ header {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  border: 4px solid #00d9ff;
-  box-shadow: 0 0 20px #00d9ff;
+  border: 4px solid blue;
+  box-shadow: 0 0 20px darkblue;
   object-fit: cover;
 }
+
+
 
 /* About & Education*/
 .about{
@@ -301,15 +313,15 @@ header {
 }
 
 .timeline-content {
-  background: #000000;
+  background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
   padding: 15px 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,217,255,0.2);
+  box-shadow: 0 0 10px darkblue;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .timeline-content h4 {
-  color: #00d9ff;
+  color: white;
   margin-bottom: 5px;
 }
 
@@ -333,7 +345,7 @@ header {
 .skills h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #00d9ff;
+  color: blue;
 }
 
 .skills-container {
@@ -343,21 +355,22 @@ header {
 }
 
 .skill-category {
-  background: black;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0,217,255,0.3);
-  text-align: left;
+  background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px darkblue;
   transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
 }
 
 .skill-category:hover {
   transform: translateY(-6px);
+  background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
   box-shadow: 0 0 20px rgba(0,217,255,0.6);
 }
 
 .skill-category h3 {
-  color: #00d9ff;
+  color: white;
   margin-bottom: 12px;
   font-size: 20px;
 }
@@ -404,9 +417,8 @@ header {
 }
 
 .skill-card {
-  background: #000000;
-  border: 1px solid #00d9ff;
-  color: #00d9ff;
+  background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
+  color: white;
   padding: 20px;
   border-radius: 12px;
   text-align: center;
@@ -414,13 +426,13 @@ header {
   font-size: 16px;
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
   cursor: pointer;
-  box-shadow: 0 0 8px rgba(0,217,255,0.2);
+  box-shadow: 0 0 8px darkblue;
 }
 
 .skill-card:hover {
   transform: translateY(-6px) scale(1.05);
-  background: #00d9ff;
-  color: #000;
+  background:linear-gradient(to right,rgb(115, 115, 253),rgb(45, 45, 255), rgb(115, 115, 253));
+  color: white;
   box-shadow: 0 0 20px rgba(0,217,255,0.6);
 }
 
@@ -434,21 +446,21 @@ header {
 .projects h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #00d9ff;
+  color: #00d9ff;;
 }
 
 .project-card {
-  background: #000000;
+  background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));;
   padding: 25px;
   margin: 25px auto;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,217,255,0.3);
+  box-shadow: 0 0 20px darkblue;
   width: 70%;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card h3 {
-  color: #00d9ff;
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -467,21 +479,21 @@ header {
 .internship h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #00d9ff;
+  color: #00d9ff;;
 }
 
 .internship-card {
-  background: #000000;
+  background: linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));;
   padding: 25px;
   margin: 20px auto;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,217,255,0.3);
+  box-shadow: 0 0 20px darkblue;
   width: 70%;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .internship-card h3 {
-  color: #00d9ff;
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -500,7 +512,7 @@ header {
 .contact h2 {
   font-size: 28px;
   margin-bottom: 30px;
-  color: #00d9ff;
+  color: white;
 }
 
 .contact-grid {
@@ -510,10 +522,10 @@ header {
 }
 
 .contact-card {
-  background: #000000;
+  background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0,217,255,0.2);
+  box-shadow: 0 0 20px darkblue;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -561,7 +573,7 @@ header {
 }
 
 .resume-card {
-  background: #000000;
+  background: rgb(81, 81, 248);
   padding: 25px;
   margin: 20px auto;
   border-radius: 12px;
@@ -584,8 +596,8 @@ header {
   display: inline-block;
   padding: 12px 25px;
   margin-left: 10px;
-  border: 2px solid #00d9ff;
-  color: #00d9ff;
+  border: 2px solid blue;
+  color: white;
   outline: none;
   border-radius: 25px;
   transition: 0.3s ease;
@@ -593,8 +605,8 @@ header {
 }
 
 .btn-outline:hover {
-  background: #00d9ff;
-  color: #000;
+  background: darkblue;
+  color: white;
   outline: none;
 }
 /* Logo with Photo */
@@ -727,7 +739,7 @@ header {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(to right, #000000, #000000, #030f39, #061b3a);
+  background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -870,29 +882,4 @@ header {
   nav ul li { margin: 0 6px; }
 }
 
-.container {
-  position: relative; /* Establish positioning context */
-  /* Add dimensions if needed */
-  min-height: 100vh; /* Example height */
-}
 
-.container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  background-image: url("My_image.png"); /* Your watermark image */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; /* Adjust fit */
-  opacity: 0.15; /* Make it subtle */
-  z-index: -1; /* Send behind content */
-}
-
-.content {
-  position: relative; /* Ensure content stays above watermark */
-  padding: 20px;
-  /* Add styling for your content */
-}
