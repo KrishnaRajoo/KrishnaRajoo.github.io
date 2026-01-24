@@ -53,7 +53,6 @@ header {
   height: 32px;
   border-radius: 50%;
   margin-right: 8px;
-  border: 2px solid blue;
   align-items: flex-start;
   margin-right: auto;
 }
@@ -294,7 +293,6 @@ header {
   max-width: 800px;
   margin: 40px auto;
   padding-left: 20px;
-  border-left: 3px solid #00d9ff;
 }
 
 .timeline-item {
@@ -308,9 +306,9 @@ header {
   top: 5px;
   height: 15px;
   width: 15px;
-  background: #00d9ff;
+  background: rgb(45, 45, 255);
   border-radius: 50%;
-  box-shadow: 0 0 10px #00d9ff;
+  box-shadow: 0 0 10px darkblue;
 }
 
 .timeline-content {
@@ -333,7 +331,7 @@ header {
 
 .timeline-content:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0,217,255,0.4);
+  box-shadow: 0 0 20px darkblue;
 }
 
 /* Skills Section */
@@ -367,7 +365,7 @@ header {
 .skill-category:hover {
   transform: translateY(-6px);
   background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
-  box-shadow: 0 0 20px rgba(0,217,255,0.6);
+  box-shadow: 0 0 20px darkblue;
 }
 
 .skill-category h3 {
@@ -434,7 +432,7 @@ header {
   transform: translateY(-6px) scale(1.05);
   background:linear-gradient(to right,rgb(115, 115, 253),rgb(45, 45, 255), rgb(115, 115, 253));
   color: white;
-  box-shadow: 0 0 20px rgba(0,217,255,0.6);
+  box-shadow: 0 0 20px darkblue;
 }
 
 /* Projects */
@@ -467,7 +465,7 @@ header {
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(0,217,255,0.5);
+  box-shadow: 0 0 25px darkblue;
 }
 
 /* Internship */
@@ -532,7 +530,7 @@ header {
 
 .contact-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(0,217,255,0.6);
+  box-shadow: 0 0 25px darkblue;
 }
 
 .contact-card .icon {
@@ -617,7 +615,7 @@ header {
   align-items: center;
   font-size: 24px;
   font-weight: bold;
-  color: #00d9ff;
+  color: blue;
 }
 
 .logo-img {
@@ -625,8 +623,6 @@ header {
   height: 35px;
   border-radius: 50%;
   margin-right: 10px;
-  border: 2px solid #00d9ff;
-  box-shadow: 0 0 8px rgba(0,217,255,0.7);
   object-fit: cover;
 }
 
@@ -755,7 +751,7 @@ header {
 /* container that will animate in */
 .splash-logo {
   text-align: center;
-  color: #00d9ff;
+  color: white;
   opacity: 0;
   transform: scale(0.85);
 }
@@ -769,8 +765,6 @@ header {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 4px solid #00d9ff;
-  box-shadow: 0 0 20px #00d9ff;
   margin-bottom: 18px;
   object-fit: cover;
 }
@@ -778,8 +772,7 @@ header {
 .splash-logo h1 {
   font-size: 32px;
   font-weight: 700;
-  letter-spacing: 1px;
-  text-shadow: 0 0 12px rgba(0,217,255,0.8);
+  letter-spacing: 1px;;
 }
 
 /* keyframes for the 1s entry */
