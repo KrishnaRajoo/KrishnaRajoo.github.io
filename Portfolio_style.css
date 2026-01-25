@@ -21,7 +21,13 @@ section {
 
 /* -------- Navbar Styles -------- */
 header {
-  background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
+  background: linear-gradient(to right, rgb(115, 115, 253), blue, rgb(115, 115, 253));
+  position: relative;
+  color: white;
+  background: linear-gradient(to right, rgba(115, 115, 253), rgba(0,0,255,0.80), rgba(115, 115, 253)), no-repeat center;
+  background-size: 380px;
+  background-size: 420px;
+  background-position: center right;
   padding: 12px 0;
   position: sticky;
   top: 0;
@@ -33,19 +39,17 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
+  align-items: left;
 }
 
 .logo {
   display: flex;
-  align-items: center;
+  align-items: right;
   font-size: 20px;
   font-weight: bold;
   color: whitesmoke;
   justify-content: flex-start;
   flex: 1;
-  text-align: left;
 }
 
 .logo-img {
@@ -54,7 +58,6 @@ header {
   border-radius: 50%;
   margin-right: 8px;
   align-items: flex-start;
-  margin-right: auto;
 }
 .logo-text{
   color: whitesmoke;
@@ -65,6 +68,7 @@ header {
   display: flex;
   list-style: none;
   gap: 20px;
+  margin-left: auto;
 }
 
 .nav-links li {
@@ -81,7 +85,7 @@ header {
 }
 
 .nav-links a:hover {
-  color: #00d9ff;
+  color: white;
 }
 
 /* Hamburger toggle button */
@@ -92,11 +96,14 @@ header {
   font-size: 26px;
   color: white;
   cursor: pointer;
+  align-items: right;
+  margin-left: auto;
 }
 /* Navbar container */
 .navbar {
   width: 85%;
-  margin: auto;
+  height: 64px
+  margin-left: auto;
   display: flex;
   justify-content: space-between; /* logo left, menu right */
   align-items: center;
@@ -122,6 +129,8 @@ header {
   color: white;
   cursor: pointer;
   margin-left: auto; /* push it to the right */
+  align-self: center;
+  
 }
 
 /* -------- Mobile view -------- */
@@ -183,11 +192,11 @@ header {
 /* Hero */
 .hero {
   padding: 100px 20px;
-  color: linear-gradient(to right, rgb(115, 115, 253), blue, rgb(115, 115, 253));
+  color: white;
   background: linear-gradient(to right, rgb(115, 115, 253), blue, rgb(115, 115, 253));
   position: relative;
   padding: 100px 20px;
-  color: linear-gradient(to right, rgb(115, 115, 253), blue, rgb(115, 115, 253));
+  color: white;
   background: linear-gradient(to right, rgba(115, 115, 253), rgba(0,0,255,0.60), rgba(115, 115, 253)),
     url("Watermark.png") no-repeat center;
   background-size: 380px;
@@ -212,7 +221,6 @@ header {
 .hero-text h2 {
   font-size: 38px;
   margin-bottom: 15px;
-  color: linear-gradient(to right, rgb(115, 115, 253), blue, rgb(115, 115, 253));
 }
 
 .hero-text .highlight {
@@ -244,25 +252,6 @@ header {
   outline: none;
   text-decoration: none;
 }
-
-/* Hero Photo */
-.hero-photo {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-.hero-photo img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 4px solid blue;
-  box-shadow: 0 0 20px darkblue;
-  object-fit: cover;
-}
-
-
 
 /* About & Education*/
 .about{
@@ -306,7 +295,7 @@ header {
   top: 5px;
   height: 15px;
   width: 15px;
-  background: rgb(45, 45, 255);
+  background: rgb(95, 95, 250);
   border-radius: 50%;
   box-shadow: 0 0 10px darkblue;
 }
@@ -332,6 +321,7 @@ header {
 .timeline-content:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px darkblue;
+  background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
 }
 
 /* Skills Section */
@@ -364,7 +354,7 @@ header {
 
 .skill-category:hover {
   transform: translateY(-6px);
-  background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
+  background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
   box-shadow: 0 0 20px darkblue;
 }
 
@@ -449,7 +439,7 @@ header {
 }
 
 .project-card {
-  background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));;
+  background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
   padding: 25px;
   margin: 25px auto;
   border-radius: 12px;
@@ -466,6 +456,7 @@ header {
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 0 25px darkblue;
+  background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
 }
 
 /* Internship */
@@ -482,7 +473,7 @@ header {
 }
 
 .internship-card {
-  background: linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));;
+  background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
   padding: 25px;
   margin: 20px auto;
   border-radius: 12px;
@@ -499,6 +490,7 @@ header {
 .internship-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 0 25px rgba(0,217,255,0.5);
+  background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
 }
 
 /* Contact Section */
@@ -531,6 +523,7 @@ header {
 .contact-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 0 25px darkblue;
+  background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
 }
 
 .contact-card .icon {
