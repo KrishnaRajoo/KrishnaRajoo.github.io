@@ -161,7 +161,6 @@ header {
     width: 100%;
     margin: 6px 0;
     background:linear-gradient(to right, rgb(45, 45, 255), rgb(115, 115, 253), rgb(45, 45, 255));
-    border: 1px solid #00d9ff;
     border-radius: 6px;
     box-shadow: 0 0 6px darkblue;
     transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
@@ -170,7 +169,7 @@ header {
   .nav-links li:hover {
     background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
     transform: translateY(-3px);
-    box-shadow: 0 0 12px rgba(0,217,255,0.5);
+    box-shadow: 0 0 12px darkblue;
     color: white;
   }
 
