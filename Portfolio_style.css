@@ -171,6 +171,7 @@ header {
     background:linear-gradient(to right, rgb(115, 115, 253), rgb(45, 45, 255), rgb(115, 115, 253));
     transform: translateY(-3px);
     box-shadow: 0 0 12px rgba(0,217,255,0.5);
+    color: white;
   }
 
   .nav-links a {
@@ -185,7 +186,7 @@ header {
   }
 
   .nav-links li:hover a {
-    color: #000;
+    color: white;
     font-weight: bold;
   }
 }
