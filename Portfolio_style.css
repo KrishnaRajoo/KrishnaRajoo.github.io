@@ -24,7 +24,7 @@ header {
   background: linear-gradient(to right, rgb(115, 115, 253), blue, rgb(115, 115, 253));
   position: relative;
   color: white;
-  background: linear-gradient(to right, rgba(115, 115, 253), rgba(0,0,255,0.80), rgba(115, 115, 253)), no-repeat center;
+  background: linear-gradient(to right, rgba(115, 115, 253), rgba(0,0,255,0.50), rgba(115, 115, 253)), no-repeat center;
   background-size: 350px;
   background-size: 350px;
   background-position: center right;
