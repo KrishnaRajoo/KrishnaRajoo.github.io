@@ -1,0 +1,2284 @@
+
+/* =========================================================
+   KRISHNA RAJOO
+   DATA SCIENCE PORTFOLIO
+   PREMIUM DARK THEME
+   ---------------------------------------------------------
+   This file is loaded AFTER style.css.
+   It intentionally overrides the light-theme colors while
+   preserving the original layout, spacing and animations.
+========================================================= */
+
+
+/* =========================================================
+   DARK THEME VARIABLES
+========================================================= */
+
+:root {
+
+    --white: #0b1120;
+    --off-white: #0f172a;
+    --surface: #111c30;
+
+    --navy: #f8fafc;
+    --navy-light: #dbeafe;
+
+    --blue: #60a5fa;
+    --blue-dark: #3b82f6;
+    --blue-light: rgba(59, 130, 246, 0.12);
+
+    --teal: #2dd4bf;
+    --teal-light: rgba(20, 184, 166, 0.10);
+
+    --text: #cbd5e1;
+    --text-light: #94a3b8;
+    --muted: #64748b;
+
+    --border: #23324a;
+
+    --shadow-sm:
+        0 4px 20px rgba(0, 0, 0, 0.30);
+
+    --shadow:
+        0 18px 50px rgba(0, 0, 0, 0.35);
+
+    --shadow-lg:
+        0 30px 80px rgba(0, 0, 0, 0.45);
+
+    --radius: 18px;
+
+    --transition:
+        all .3s ease;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html {
+    background: #070d18;
+}
+
+body {
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(37, 99, 235, 0.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(14, 165, 233, 0.06),
+            transparent 25%
+        ),
+        linear-gradient(
+            180deg,
+            #070d18 0%,
+            #0a1220 45%,
+            #0b1424 100%
+        );
+
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+========================================================= */
+
+::selection {
+    background: rgba(96, 165, 250, 0.25);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    background: transparent;
+}
+
+.nav-container {
+
+    background:
+        rgba(10, 18, 32, 0.82);
+
+    border-color:
+        rgba(96, 165, 250, 0.16);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.30);
+
+    backdrop-filter:
+        blur(22px);
+
+    -webkit-backdrop-filter:
+        blur(22px);
+}
+
+
+/* Scrolled navbar */
+
+.navbar.scrolled .nav-container {
+
+    background:
+        rgba(8, 15, 27, 0.94);
+
+    border-color:
+        rgba(96, 165, 250, 0.20);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.40);
+}
+
+
+/* Logo */
+
+.logo {
+    color: #f8fafc;
+}
+
+.logo-mark {
+
+    background:
+        #111827;
+
+    border:
+        1px solid rgba(96, 165, 250, 0.20);
+
+    box-shadow:
+        0 5px 18px rgba(37, 99, 235, 0.20);
+}
+
+
+/* Navigation */
+
+.nav-links a {
+    color: #94a3b8;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #60a5fa;
+}
+
+.nav-links a::after {
+    background: #60a5fa;
+}
+
+
+/* Let's Talk */
+
+.nav-contact {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #3b82f6
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.22);
+}
+
+.nav-contact:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b82f6,
+            #60a5fa
+        );
+
+    box-shadow:
+        0 12px 28px rgba(59, 130, 246, 0.30);
+}
+
+
+/* Theme button */
+
+.theme-toggle {
+
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+        1px solid rgba(96, 165, 250, 0.18);
+
+    border-radius: 10px;
+
+    background:
+        rgba(15, 23, 42, 0.65);
+
+    color: #60a5fa;
+
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+.theme-toggle:hover {
+
+    background:
+        rgba(37, 99, 235, 0.15);
+
+    border-color:
+        rgba(96, 165, 250, 0.38);
+
+    transform:
+        translateY(-2px);
+
+    color: #93c5fd;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .menu-toggle {
+
+        border-color:
+            rgba(96, 165, 250, 0.20);
+
+        background:
+            rgba(15, 23, 42, 0.55);
+
+        backdrop-filter:
+            blur(16px);
+
+        -webkit-backdrop-filter:
+            blur(16px);
+    }
+
+
+    .menu-toggle span {
+        background:
+            #93c5fd;
+    }
+
+
+    .menu-toggle:hover {
+
+        background:
+            rgba(37, 99, 235, 0.14);
+
+        border-color:
+            rgba(96, 165, 250, 0.35);
+    }
+
+
+    .nav-links {
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(10, 18, 32, 0.97),
+                rgba(7, 13, 24, 0.98)
+            );
+
+        border:
+            1px solid rgba(96, 165, 250, 0.18);
+
+        border-top:
+            1px solid rgba(96, 165, 250, 0.10);
+
+        box-shadow:
+            0 25px 60px rgba(0, 0, 0, 0.55);
+
+        backdrop-filter:
+            blur(25px);
+
+        -webkit-backdrop-filter:
+            blur(25px);
+    }
+
+
+    .nav-links a {
+
+        background:
+            rgba(30, 41, 59, 0.52);
+
+        border:
+            1px solid rgba(148, 163, 184, 0.08);
+
+        color:
+            #cbd5e1;
+    }
+
+
+    .nav-links a:hover {
+
+        background:
+            rgba(37, 99, 235, 0.14);
+
+        border-color:
+            rgba(96, 165, 250, 0.20);
+
+        color:
+            #93c5fd;
+    }
+
+
+    .nav-links a.active {
+
+        background:
+            rgba(37, 99, 235, 0.17);
+
+        border-color:
+            rgba(96, 165, 250, 0.25);
+
+        color:
+            #60a5fa;
+    }
+
+}
+
+
+/* =========================================================
+   HERO BACKGROUND
+========================================================= */
+
+.hero-background {
+    background:
+        transparent;
+}
+
+.data-grid {
+
+    opacity: .38;
+
+    background-image:
+
+        linear-gradient(
+            rgba(96, 165, 250, .045) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(96, 165, 250, .045) 1px,
+            transparent 1px
+        );
+}
+
+
+/* Hero glowing orbs */
+
+.orb-one {
+
+    background:
+        #2563eb;
+
+    opacity:
+        .14;
+
+    filter:
+        blur(100px);
+}
+
+.orb-two {
+
+    background:
+        #0f766e;
+
+    opacity:
+        .12;
+
+    filter:
+        blur(100px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    color: #cbd5e1;
+}
+
+
+/* Availability badge */
+
+.availability {
+
+    border-color:
+        rgba(96, 165, 250, 0.28);
+
+    background:
+        rgba(37, 99, 235, 0.10);
+
+    color:
+        #60a5fa;
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.08);
+}
+
+
+/* Intro */
+
+.hero-intro {
+    color:
+        #60a5fa;
+}
+
+
+/* Main heading */
+
+.hero h1 {
+
+    color:
+        #f8fafc;
+
+    text-shadow:
+        0 5px 30px rgba(0, 0, 0, 0.25);
+}
+
+.hero h1 span {
+    color:
+        #60a5fa;
+}
+
+
+/* Hero description */
+
+.hero-description {
+    color:
+        #94a3b8;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.btn-primary {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #3b82f6
+        );
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 10px 28px rgba(37, 99, 235, 0.20);
+}
+
+.btn-primary:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b82f6,
+            #60a5fa
+        );
+
+    box-shadow:
+        0 15px 35px rgba(37, 99, 235, 0.30);
+}
+
+
+.btn-secondary {
+
+    background:
+        rgba(15, 23, 42, 0.65);
+
+    color:
+        #e2e8f0;
+
+    border:
+        1px solid #26364f;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary:hover {
+
+    background:
+        rgba(37, 99, 235, 0.10);
+
+    border-color:
+        #3b82f6;
+
+    color:
+        #60a5fa;
+}
+
+
+/* =========================================================
+   HERO SOCIAL LINKS
+========================================================= */
+
+.hero-links a {
+    color:
+        #94a3b8;
+}
+
+.hero-links a:hover {
+    color:
+        #60a5fa;
+}
+
+
+/* =========================================================
+   DATA SCIENCE CIRCULAR VISUAL
+========================================================= */
+
+.hero-visual {
+    color:
+        #cbd5e1;
+}
+
+
+/* Main orbit */
+
+.orbit-outer {
+
+    border-color:
+        rgba(96, 165, 250, 0.22);
+
+    box-shadow:
+        0 0 80px rgba(37, 99, 235, 0.10);
+}
+
+.orbit-inner {
+
+    border-color:
+        rgba(45, 212, 191, 0.25);
+}
+
+
+/* Core */
+
+.ds-core {
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #182b48,
+            #0d1728 72%
+        );
+
+    border:
+        1px solid rgba(96, 165, 250, 0.28);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.50),
+        inset 0 0 35px rgba(37, 99, 235, 0.10),
+        0 0 45px rgba(37, 99, 235, 0.08);
+}
+
+
+/* Core glow */
+
+.core-glow {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59, 130, 246, 0.25),
+            transparent 70%
+        );
+}
+
+
+/* Core text */
+
+.core-label {
+    color:
+        #94a3b8;
+}
+
+.ds-core strong {
+    color:
+        #93c5fd;
+}
+
+.ds-core small {
+    color:
+        #2dd4bf;
+}
+
+
+/* Nodes */
+
+.ds-node {
+
+    background:
+        rgba(15, 23, 42, 0.78);
+
+    border:
+        1px solid rgba(96, 165, 250, 0.17);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.38);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+}
+
+.ds-node:hover {
+
+    border-color:
+        rgba(96, 165, 250, 0.40);
+
+    box-shadow:
+        0 18px 40px rgba(37, 99, 235, 0.18);
+}
+
+
+.node-icon {
+
+    background:
+        rgba(37, 99, 235, 0.12);
+
+    color:
+        #60a5fa;
+}
+
+.ds-node span {
+    color:
+        #cbd5e1;
+}
+
+
+/* Orbit dots */
+
+.orbit-dot {
+
+    background:
+        #60a5fa;
+
+    box-shadow:
+        0 0 15px rgba(96, 165, 250, 0.55);
+}
+
+.dot-two {
+    background:
+        #22d3ee;
+}
+
+.dot-four {
+    background:
+        #2dd4bf;
+}
+
+
+/* =========================================================
+   COMMON SECTIONS
+========================================================= */
+
+.section {
+    color:
+        #cbd5e1;
+}
+
+
+/* Section separators */
+
+.about,
+.certifications {
+
+    border-top-color:
+        #1e2c42;
+}
+
+
+/* Section number */
+
+.section-number {
+    color:
+        #60a5fa;
+}
+
+
+/* Eyebrow */
+
+.eyebrow {
+    color:
+        #60a5fa;
+}
+
+
+/* Section headings */
+
+.section-heading h2 {
+
+    color:
+        #f8fafc;
+
+    text-shadow:
+        0 4px 25px rgba(0, 0, 0, 0.18);
+}
+
+.section-heading h2 span {
+    color:
+        #60a5fa;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+
+    background:
+        transparent;
+}
+
+
+.about-text p {
+    color:
+        #94a3b8;
+}
+
+.about-text .large-text {
+    color:
+        #cbd5e1;
+}
+
+.about-text strong {
+    color:
+        #60a5fa;
+}
+
+
+/* Stats */
+
+.stat-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #111c30,
+            #0d1728
+        );
+
+    border:
+        1px solid #22324a;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.20);
+}
+
+.stat-card:hover {
+
+    border-color:
+        rgba(96, 165, 250, 0.35);
+
+    box-shadow:
+        0 18px 45px rgba(37, 99, 235, 0.12);
+}
+
+.stat-number {
+    color:
+        #f8fafc;
+}
+
+.stat-label {
+    color:
+        #94a3b8;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-section {
+
+    background:
+        linear-gradient(
+            180deg,
+            #0b1424 0%,
+            #0d1728 100%
+        );
+}
+
+
+.skill-category {
+
+    background:
+        linear-gradient(
+            145deg,
+            #111c30,
+            #0d1728
+        );
+
+    border:
+        1px solid #22324a;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.20);
+}
+
+.skill-category:hover {
+
+    border-color:
+        rgba(96, 165, 250, 0.35);
+
+    box-shadow:
+        0 20px 50px rgba(37, 99, 235, 0.12);
+}
+
+
+.skill-icon {
+
+    background:
+        rgba(37, 99, 235, 0.12);
+
+    color:
+        #60a5fa;
+
+    border:
+        1px solid rgba(96, 165, 250, 0.08);
+}
+
+.skill-category h3 {
+    color:
+        #f1f5f9;
+}
+
+
+.skill-list span {
+
+    background:
+        #0c1627;
+
+    border:
+        1px solid #22324a;
+
+    color:
+        #94a3b8;
+}
+
+.skill-list span:hover {
+
+    background:
+        rgba(37, 99, 235, 0.10);
+
+    border-color:
+        rgba(96, 165, 250, 0.25);
+
+    color:
+        #93c5fd;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.experience-section {
+    background:
+        transparent;
+}
+
+
+.timeline::before {
+
+    background:
+        #24344c;
+}
+
+
+.timeline-marker {
+
+    background:
+        #0b1424;
+
+    border-color:
+        #60a5fa;
+
+    box-shadow:
+        0 0 0 5px rgba(37, 99, 235, 0.08);
+}
+
+.timeline-marker span {
+    background:
+        #60a5fa;
+}
+
+
+.timeline-content {
+
+    background:
+        linear-gradient(
+            145deg,
+            #111c30,
+            #0d1728
+        );
+
+    border:
+        1px solid #22324a;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.20);
+}
+
+.timeline-content:hover {
+
+    border-color:
+        rgba(96, 165, 250, 0.25);
+
+    box-shadow:
+        0 20px 50px rgba(37, 99, 235, 0.10);
+}
+
+
+.experience-type {
+    color:
+        #60a5fa;
+}
+
+.timeline-content h3 {
+    color:
+        #f8fafc;
+}
+
+.timeline-content h4 {
+    color:
+        #94a3b8;
+}
+
+.timeline-date {
+    color:
+        #64748b;
+}
+
+.timeline-content li {
+    color:
+        #94a3b8;
+}
+
+
+/* Experience tags */
+
+.experience-tags span {
+
+    background:
+        rgba(37, 99, 235, 0.10);
+
+    color:
+        #93c5fd;
+
+    border:
+        1px solid rgba(96, 165, 250, 0.10);
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects-section {
+
+    background:
+        linear-gradient(
+            180deg,
+            #0d1728,
+            #0a1220
+        );
+}
+
+
+.project-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #111c30,
+            #0d1728
+        );
+
+    border:
+        1px solid #22324a;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.20);
+}
+
+.project-card:hover {
+
+    border-color:
+        rgba(96, 165, 250, 0.35);
+
+    box-shadow:
+        0 25px 65px rgba(37, 99, 235, 0.14);
+}
+
+
+.project-number {
+    color:
+        #60a5fa;
+}
+
+
+.project-links a {
+
+    border-color:
+        #2a3a52;
+
+    color:
+        #94a3b8;
+
+    background:
+        rgba(15, 23, 42, 0.50);
+}
+
+.project-links a:hover {
+
+    color:
+        #ffffff;
+
+    background:
+        #2563eb;
+
+    border-color:
+        #2563eb;
+}
+
+
+/* =========================================================
+   PROJECT VISUALS
+========================================================= */
+
+.project-visual {
+    border:
+        1px solid rgba(96, 165, 250, 0.10);
+}
+
+
+/* Movie */
+
+.movie-visual {
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(37, 99, 235, 0.20),
+            transparent 55%
+        ),
+        linear-gradient(
+            135deg,
+            #101e34,
+            #0c1728
+        );
+}
+
+
+/* Dashboard */
+
+.dashboard-visual {
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(20, 184, 166, 0.16),
+            transparent 55%
+        ),
+        linear-gradient(
+            135deg,
+            #0d2227,
+            #0b1821
+        );
+}
+
+
+/* Fraud */
+
+.fraud-visual {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59, 130, 246, 0.18),
+            transparent 60%
+        ),
+        linear-gradient(
+            135deg,
+            #111c35,
+            #0d1628
+        );
+}
+
+
+/* Health */
+
+.health-visual {
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(45, 212, 191, 0.13),
+            transparent 55%
+        ),
+        linear-gradient(
+            135deg,
+            #0c2022,
+            #0d1828
+        );
+}
+
+
+/* Mini chart */
+
+.bar {
+    background:
+        linear-gradient(
+            180deg,
+            #60a5fa,
+            #2563eb
+        );
+}
+
+
+/* Dashboard mini cards */
+
+.dashboard-box div {
+
+    background:
+        #111f33;
+
+    border-color:
+        #29405e;
+}
+
+.dashboard-box div::after {
+
+    background:
+        rgba(96, 165, 250, 0.35);
+}
+
+
+/* Fraud ring */
+
+.fraud-ring {
+
+    border-color:
+        rgba(96, 165, 250, 0.15);
+
+    border-top-color:
+        #60a5fa;
+
+    color:
+        #60a5fa;
+
+    box-shadow:
+        0 0 30px rgba(37, 99, 235, 0.12);
+}
+
+
+/* Health score */
+
+.health-score strong {
+    color:
+        #f8fafc;
+}
+
+.health-score span {
+    color:
+        #60a5fa;
+}
+
+
+/* Visual label */
+
+.visual-label {
+
+    background:
+        rgba(7, 13, 24, 0.80);
+
+    border-color:
+        rgba(96, 165, 250, 0.16);
+
+    color:
+        #93c5fd;
+
+    backdrop-filter:
+        blur(8px);
+}
+
+
+/* Project text */
+
+.project-category {
+    color:
+        #60a5fa;
+}
+
+.project-card h3 {
+    color:
+        #f8fafc;
+}
+
+.project-card p {
+    color:
+        #94a3b8;
+}
+
+
+/* Project tags */
+
+.project-tags span {
+
+    background:
+        #0c1627;
+
+    border-color:
+        #22324a;
+
+    color:
+        #94a3b8;
+}
+
+
+/* =========================================================
+   VOLUNTEERING
+========================================================= */
+
+.volunteering-section {
+
+    background:
+        #0b1424;
+}
+
+
+.volunteer-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #111c30,
+            #0d1728
+        );
+
+    border:
+        1px solid #22324a;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.20);
+}
+
+
+.volunteer-card:hover {
+
+    border-color:
+        rgba(96, 165, 250, 0.35);
+
+    box-shadow:
+        0 25px 65px rgba(37, 99, 235, 0.14);
+}
+
+
+.volunteer-card::before {
+
+    background:
+        linear-gradient(
+            90deg,
+            #3b82f6,
+            #2dd4bf
+        );
+}
+
+
+.volunteer-number {
+    color:
+        #60a5fa;
+}
+
+
+.volunteer-icon {
+
+    background:
+        rgba(37, 99, 235, 0.12);
+
+    color:
+        #60a5fa;
+
+    border:
+        1px solid rgba(96, 165, 250, 0.08);
+}
+
+
+.volunteer-label {
+    color:
+        #60a5fa;
+}
+
+
+.volunteer-card h3 {
+    color:
+        #f8fafc;
+}
+
+
+.volunteer-card h4 {
+    color:
+        #94a3b8;
+}
+
+
+.volunteer-card p {
+    color:
+        #94a3b8;
+}
+
+
+.volunteer-meta {
+
+    border-top-color:
+        #22324a;
+}
+
+
+.volunteer-meta span {
+    color:
+        #64748b;
+}
+
+
+.volunteer-meta i {
+    color:
+        #60a5fa;
+}
+
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.education-section {
+    background:
+        transparent;
+}
+
+
+.education-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #111c30,
+            #0d1728
+        );
+
+    border:
+        1px solid #22324a;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+.education-card:hover {
+
+    border-color:
+        rgba(96, 165, 250, 0.30);
+
+    box-shadow:
+        0 20px 50px rgba(37, 99, 235, 0.11);
+}
+
+
+.education-icon {
+
+    background:
+        rgba(37, 99, 235, 0.12);
+
+    color:
+        #60a5fa;
+}
+
+
+.education-content > span {
+    color:
+        #60a5fa;
+}
+
+
+.education-content h3 {
+    color:
+        #f8fafc;
+}
+
+
+.education-content p {
+    color:
+        #94a3b8;
+}
+
+
+.education-content strong {
+    color:
+        #cbd5e1;
+}
+
+
+.education-score small {
+    color:
+        #64748b;
+}
+
+
+.education-score strong {
+    color:
+        #f8fafc;
+}
+
+
+/* =========================================================
+   CERTIFICATIONS
+========================================================= */
+
+.certifications {
+
+    background:
+        #0b1424;
+
+    border-top-color:
+        #22324a;
+}
+
+
+.cert-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #111c30,
+            #0d1728
+        );
+
+    border:
+        1px solid #22324a;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+.cert-card:hover {
+
+    border-color:
+        rgba(96, 165, 250, 0.32);
+
+    box-shadow:
+        0 20px 50px rgba(37, 99, 235, 0.12);
+}
+
+
+.cert-card > span {
+    color:
+        #64748b;
+}
+
+
+.cert-card i {
+    color:
+        #60a5fa;
+}
+
+
+.cert-card h3 {
+    color:
+        #f8fafc;
+}
+
+
+.cert-card p {
+    color:
+        #94a3b8;
+}
+
+
+/* =========================================================
+   RESUME
+========================================================= */
+
+.resume-section {
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(37, 99, 235, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0d1b30,
+            #0a1220
+        );
+
+    border-top-color:
+        #22324a;
+}
+
+
+.resume-content h2 {
+    color:
+        #f8fafc;
+}
+
+.resume-content h2 span {
+    color:
+        #60a5fa;
+}
+
+
+.resume-content p {
+    color:
+        #94a3b8;
+}
+
+
+/* Resume buttons */
+
+.resume-btn.primary {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #3b82f6
+        );
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.18);
+}
+
+
+.resume-btn.primary:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b82f6,
+            #60a5fa
+        );
+}
+
+
+.resume-btn.secondary {
+
+    color:
+        #cbd5e1;
+
+    background:
+        rgba(15, 23, 42, 0.65);
+
+    border-color:
+        #293a53;
+}
+
+
+.resume-btn.secondary:hover {
+
+    border-color:
+        #3b82f6;
+
+    color:
+        #60a5fa;
+
+    background:
+        rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================================
+   RESUME PREVIEW
+========================================================= */
+
+.resume-document {
+
+    background:
+        #f8fafc;
+
+    border:
+        1px solid #334155;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.50);
+}
+
+
+/*
+   Keep the miniature resume itself light.
+   This is intentional: it should look like an actual
+   document preview even when the portfolio is dark.
+*/
+
+.resume-document-top {
+    border-bottom-color:
+        #0f172a;
+}
+
+
+.fake-photo {
+
+    background:
+        #0f172a;
+
+    color:
+        #ffffff;
+}
+
+
+.resume-document-top strong {
+    color:
+        #0f172a;
+}
+
+
+.resume-document-top span {
+    color:
+        #2563eb;
+}
+
+
+.resume-line {
+    background:
+        #e2e8f0;
+}
+
+
+.resume-line.large {
+    background:
+        #cbd5e1;
+}
+
+
+.resume-section-lines span {
+    background:
+        #e2e8f0;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            #07101d,
+            #0b1627
+        );
+
+    color:
+        #ffffff;
+
+    border-top:
+        1px solid #1e2c42;
+}
+
+
+/* Contact heading */
+
+.contact-section .eyebrow {
+    color:
+        #60a5fa;
+}
+
+
+.contact-copy h2 {
+    color:
+        #f8fafc;
+}
+
+
+.contact-copy h2 span {
+    color:
+        #60a5fa;
+}
+
+
+.contact-copy p {
+    color:
+        #94a3b8;
+}
+
+
+/* Direct contact */
+
+.contact-direct a {
+    color:
+        #cbd5e1;
+}
+
+
+.contact-direct a:hover {
+    color:
+        #60a5fa;
+}
+
+
+.contact-direct i {
+
+    background:
+        rgba(37, 99, 235, 0.12);
+
+    color:
+        #60a5fa;
+
+    border:
+        1px solid rgba(96, 165, 250, 0.08);
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-form {
+
+    background:
+        linear-gradient(
+            145deg,
+            #101c30,
+            #0c1627
+        );
+
+    border:
+        1px solid #263851;
+
+    border-radius:
+        20px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+
+.form-group label {
+    color:
+        #cbd5e1;
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    background:
+        #091322;
+
+    border:
+        1px solid #273951;
+
+    color:
+        #f8fafc;
+}
+
+
+.form-group input:hover,
+.form-group textarea:hover {
+
+    border-color:
+        #344b68;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color:
+        #64748b;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color:
+        #3b82f6;
+
+    background:
+        #0a1628;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(59, 130, 246, .12);
+}
+
+
+/* Send button */
+
+.send-button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #3b82f6
+        );
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 10px 25px
+        rgba(37, 99, 235, .18);
+}
+
+
+.send-button:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b82f6,
+            #60a5fa
+        );
+
+    box-shadow:
+        0 15px 35px
+        rgba(37, 99, 235, .28);
+}
+
+
+.form-status {
+    color:
+        #94a3b8;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    background:
+        transparent;
+
+    border-top:
+        1px solid transparent;
+}
+
+
+.footer strong {
+    color:
+        #f8fafc;
+}
+
+
+.footer span,
+.footer p {
+    color:
+        #64748b;
+}
+
+
+.back-top {
+
+    border-color:
+        #293a52;
+
+    color:
+        #cbd5e1;
+
+    background:
+        rgba(15, 23, 42, 0.50);
+}
+
+
+.back-top:hover {
+
+    background:
+        #2563eb;
+
+    border-color:
+        #2563eb;
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================================
+   SCREEN LOADER
+========================================================= */
+
+.screen-loader {
+
+    background:
+        radial-gradient(
+            circle at center,
+            #101e35 0%,
+            #08101e 55%,
+            #050a13 100%
+        );
+}
+
+
+/* Loader ring */
+
+.loader-ring {
+
+    border-color:
+        #1e293b;
+
+    border-top-color:
+        #3b82f6;
+
+    border-right-color:
+        #60a5fa;
+
+    box-shadow:
+        0 0 35px rgba(37, 99, 235, 0.12);
+}
+
+
+.loader-ring::after {
+
+    border-color:
+        rgba(96, 165, 250, .20);
+}
+
+
+/* Loader logo */
+
+.loader-logo {
+
+    background:
+        #0f172a;
+
+    border-color:
+        #172338;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, .45);
+}
+
+
+/* Loader text */
+
+.loader-name {
+    color:
+        #f8fafc;
+}
+
+
+.loader-subtitle {
+    color:
+        #64748b;
+}
+
+
+/* Progress */
+
+.loader-progress {
+
+    background:
+        #1e293b;
+}
+
+
+.loader-progress-bar {
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #60a5fa,
+            #2dd4bf
+        );
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width:
+        10px;
+}
+
+::-webkit-scrollbar-track {
+    background:
+        #070d18;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        linear-gradient(
+            180deg,
+            #1d4ed8,
+            #2563eb
+        );
+
+    border-radius:
+        10px;
+
+    border:
+        2px solid #070d18;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:
+        #3b82f6;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+
+    outline:
+        2px solid #60a5fa;
+
+    outline-offset:
+        3px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DARK OVERRIDES
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .hero {
+        color:
+            #cbd5e1;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .nav-container {
+
+        background:
+            rgba(8, 15, 27, 0.90);
+
+        border-color:
+            rgba(96, 165, 250, 0.16);
+    }
+
+
+    .hero {
+        background:
+            transparent;
+    }
+
+
+    .section-heading h2 {
+        color:
+            #f8fafc;
+    }
+
+
+    .about-grid,
+    .contact-inner {
+        color:
+            #cbd5e1;
+    }
+
+
+    .project-card,
+    .skill-category,
+    .stat-card,
+    .volunteer-card,
+    .education-card,
+    .cert-card,
+    .timeline-content {
+
+        box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.25);
+    }
+
+
+    .contact-form {
+
+        padding:
+            24px;
+
+        background:
+            linear-gradient(
+                145deg,
+                #101c30,
+                #0c1627
+            );
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .ds-core {
+
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.45),
+            inset 0 0 25px rgba(37, 99, 235, 0.10);
+    }
+
+
+    .ds-node {
+
+        background:
+            rgba(10, 20, 35, 0.88);
+
+        border-color:
+            rgba(96, 165, 250, 0.18);
+    }
+
+
+    .resume-document {
+
+        box-shadow:
+            0 20px 55px rgba(0, 0, 0, 0.45);
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .theme-toggle {
+
+        width:
+            38px;
+
+        height:
+            38px;
+    }
+
+
+    .btn-secondary,
+    .resume-btn.secondary {
+
+        background:
+            rgba(15, 23, 42, 0.75);
+    }
+
+}
+
+
+/* =========================================================
+   FINAL DARK POLISH
+========================================================= */
+
+/*
+   Prevent accidental light backgrounds from the original
+   light stylesheet from leaking into the dark theme.
+*/
+
+main,
+section {
+    color:
+        #cbd5e1;
+}
+
+
+/* Explicitly override common white surfaces */
+
+.stat-card,
+.skill-category,
+.timeline-content,
+.project-card,
+.volunteer-card,
+.education-card,
+.cert-card {
+
+    color:
+        #cbd5e1;
+}
+
+
+/* Keep headings consistently bright */
+
+.stat-card h3,
+.skill-category h3,
+.timeline-content h3,
+.project-card h3,
+.volunteer-card h3,
+.education-card h3,
+.cert-card h3 {
+
+    color:
+        #f8fafc;
+}
+
+
+/* Consistent paragraph contrast */
+
+.stat-card p,
+.skill-category p,
+.timeline-content p,
+.project-card p,
+.volunteer-card p,
+.education-card p,
+.cert-card p {
+
+    color:
+        #94a3b8;
+}
+
+
+/* Smooth theme transition */
+
+body,
+.nav-container,
+.stat-card,
+.skill-category,
+.timeline-content,
+.project-card,
+.volunteer-card,
+.education-card,
+.cert-card,
+.contact-form,
+.resume-section,
+.projects-section,
+.skills-section,
+.volunteering-section,
+.certifications {
+
+    transition:
+        background-color .35s ease,
+        background .35s ease,
+        border-color .35s ease,
+        color .35s ease,
+        box-shadow .35s ease;
+}
+
